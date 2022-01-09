@@ -3,9 +3,7 @@
 #include <string.h>
 int main()
 {
-	char arr1[] = "abc";
-	char arr2[] = { 'a','b','c','\0'};
-	printf("%zd\n", strlen(arr1));
-	printf("%zd\n", strlen(arr2));
+	printf("%d\n", strlen("abcdef"));
+	printf("%d\n", strlen("c:\test\328\test.c"));
 	return 0;
 }
