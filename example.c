@@ -2,14 +2,14 @@
 #include <stdio.h> 
 int main()
 {
-	int age = 20;
-	if (age < 18)
-		printf("少年");
-	else if (age >= 18 && age < 40)
-		printf("青年");
-	else if (age >= 40 && age < 60)
-		printf("中年");
-	else
-		printf("晚年");
+	int i = 0;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 2 == 1)
+		{
+			printf("%d ", i);
+		}
+	}
+		
 	return 0;
 }
