@@ -2,14 +2,10 @@
 #include <stdio.h> 
 int main()
 {
-	int i = 0;
-	for (i = 1; i <= 100; i++)
+	int ch = 0;
+	while ((ch = getchar()) != EOF)
 	{
-		if (i % 2 == 1)
-		{
-			printf("%d ", i);
-		}
+		putchar(ch);
 	}
-		
 	return 0;
 }
