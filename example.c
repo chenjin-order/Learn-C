@@ -2,14 +2,14 @@
 #include <stdio.h> 
 int main()
 {
-	int ch = 0;
-	while ((ch = getchar()) != EOF)
+	int i = 0;
+	int j = 0;
+	for (; i < 3; i++)
 	{
-		if (ch < '0' || ch > '9')
+		for (; j <3; j++)
 		{
-			continue;
+			printf("hello\n");
 		}
-		putchar(ch);
 	}
 	return 0;
 }
