@@ -1,38 +1,30 @@
 #define _CRT_SECURE_NO_WARNINGS 
 
 #include <stdio.h>
+#include <string.h>
+#include <Windows.h>
 
 int main()
 {
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int k = 7;
-	int sz = sizeof(arr) / sizeof(arr[0]);
-
-	int left = 0;
-	int right = sz - 1;
-
-	while (left <= right)
+	int i = 0;
+	char password[20] = { 0 };
+	for ( i = 0; i < 3; i++)
 	{
-		int mid = (left + right) / 2;
-		if (arr[mid] < k)
+		printf("请输入密码:>");
+		scanf("%s", password);
+		if (strcmp(password,"123456") == 0)
 		{
-			left = mid + 1;
-		}
-		else if (arr[mid] > k)
-		{
-			right = mid - 1;
+			printf("登录成功\n");
+			break;
 		}
 		else
 		{
-			printf("找到了,数组下标：%d\n", mid);
-			break;
+			printf("密码错误,请重新输入!\n");
 		}
-
 	}
-	if (left > right)
+	if (i == 3)
 	{
-		printf("找不到了\n");
+		printf("密码输入错误，退出程序");
 	}
-
 	return 0;
 }
