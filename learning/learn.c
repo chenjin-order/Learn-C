@@ -4,28 +4,39 @@
 
 int main()
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	scanf("%d%d%d", &a, &b, &c);
-	if (a < b)
+	int m = 0;
+	int n = 0;
+	
+	scanf("%d%d", &m, &n);
+	
+	/*int max = 0;
+
+	if (m > n)
 	{
-		int tmp = a;
-		a = b;
-		b = tmp;
+		max = n;
 	}
-	if (a < c)
+	else
 	{
-		int tmp = a;
-		a = c;
-		c = tmp;
+		max = m;
 	}
-	if (b < c)
+
+	while (1)
 	{
-		int tmp = b;
-		b = c;
-		c = tmp;
+		if (m %  max == 0 && n % max == 0)
+		{
+			printf("最大公约数是： %d\n", max);
+			break;
+		}
+		max--;
+	}*/
+	int t = 0;
+
+	while (t = m % n)
+	{
+		m = n; 
+		n = t;
 	}
-	printf("%d %d %d\n", a, b, c);
+
+	printf("最大公约数是： %d\n", n);
 	return 0;
 }
