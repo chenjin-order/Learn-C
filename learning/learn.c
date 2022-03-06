@@ -6,18 +6,9 @@
 
 int main()
 {
-	char input[20] = { 0 };
-	system("shutdown -s -t 60 ");
-again:	
-	printf("请注意，你的电脑将在一分钟之后关机，请输入取消关机，就停止关机\n");
-	scanf("%s", input);
-	if (strcmp(input, "取消关机") == 0)
-	{
-		system("shutdown -a");
-	}
-	else
-	{
-		goto again;
-	}
+	char arr[] = "hello bit";
+	memset(arr, 'x', 5);
+	printf("%s", arr);
+
 	return 0;
 }
